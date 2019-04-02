@@ -21,5 +21,9 @@ def main_page():
         past_images.append(current_images[i]["title"])
     return render_template('home.html', first=current_images[0], second=current_images[1], third=current_images[2])
 
+@app.route('/image_info')
+def image_page():
+    return render_template('image_info.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
