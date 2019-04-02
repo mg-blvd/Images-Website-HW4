@@ -19,7 +19,6 @@ def main_page():
     for i in range(len(current_images)):
         current_images[i] = assert_no_repeating(past_images)
         past_images.append(current_images[i]["title"])
-
     return render_template('home.html', first=current_images[0], second=current_images[1], third=current_images[2])
 
 if __name__ == '__main__':
