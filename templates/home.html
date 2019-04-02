@@ -1,6 +1,6 @@
 <h1>Pictures</h1>
 <h3>{{ first["title"] }}</h3>
-<a href="{{url_for('image_page')}}">
+<a href="{{ url_for('image_page') }}">
   <img src={{ url_for('static', filename = (first["id"] + ".jpg")) }} width="200" class="img-responsive img-rounded" alt={{ first["title"] }}>
 </a>
 <h3>{{ second["title"] }}</h3>
