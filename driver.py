@@ -12,7 +12,6 @@ def assert_no_repeating(array1):
         current = random.choice(image_info)
     return current
 
-
 @app.route('/')
 def main_page():
     past_images = []
