@@ -2,6 +2,7 @@ from flask import Flask, render_template
 from flask_bootstrap import Bootstrap
 from image_info import image_info
 import random
+import ast
 
 app = Flask(__name__, static_url_path = "/static", static_folder = "static")
 bootstrap = Bootstrap(app)
@@ -21,9 +22,11 @@ def main_page():
         past_images.append(current_images[i]["title"])
     return render_template('home.html', first=current_images[0], second=current_images[1], third=current_images[2])
 
-@app.route('/image_info/')
-def image_page():
-    return render_template('image_info.html')
+@app.route('/image_info/<var>')
+def image_page(var):
+    print(type(var))
+    new_var = ast.literal_eval(var)
+    return render_template('image_info.html', pic=new_var)
 
 if __name__ == '__main__':
     app.run(debug=True)
