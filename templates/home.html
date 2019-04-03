@@ -17,16 +17,16 @@ Function: We pass in the image title with the specific variables from the array.
   </head>
   <body>
     <h1>Pictures</h1>
-    <h3>{{ first["title"] }}</h3>
     <a href="{{ url_for('image_page', var=first) }}">
+      <h3>{{ first["title"] }}</h3>
       <img src={{ url_for('static', filename = (first["id"] + ".jpg")) }} width="200" class="img-responsive img-rounded" alt={{ first["title"] }}>
     </a>
-    <h3>{{ second["title"] }}</h3>
     <a href="{{ url_for('image_page', var=second) }}">
+      <h3>{{ second["title"] }}</h3>
       <img src={{ url_for('static', filename = (second["id"] + ".jpg")) }} width="200" class="img-responsive img-rounded" alt={{ second["title"] }}>
     </a>
-    <h3>{{ third["title"] }}</h3>
     <a href="{{ url_for('image_page', var=third) }}">
+      <h3>{{ third["title"] }}</h3>
       <img src={{ url_for('static', filename = (third["id"] + ".jpg")) }} width="200" class="img-responsive img-rounded" alt={{ third["title"] }}>
     </a>
   </body>
