@@ -1,12 +1,21 @@
 <!DOCTYPE html>
+<!--Authors: Misael Guijarro && Jose Alfaro
+Date: 04/02/2019
+Class: CST 205
+Teacher: Wes Modes
+Description: This contains the layout for our image description page.-->
 <html>
   <head>
     <title>Specfic Image</title>
   </head>
   <body>
+    <!--On the next line we print out the image title and author using the dicitonary
+    we passed in from out python file. We also display the image on the next line.-->
     <h3>"{{ pic["title"] }}" by {{ pic["flickr_user"] }}</h3>
     <img src={{ url_for('static', filename = (pic["id"] + ".jpg")) }} class="img-responsive img-rounded" alt={{ pic["title"] }}>
     <br><br>
+    <!--Here we print out the kind of image and its dimesions. The line also contains a
+    link back to the Homepage-->
     <p>RGB image in JPEG format with width {{ w }} and height {{ h }}.</p>
     <a href="{{url_for('main_page')}}">Go back to Homepage</a>
   </body>
