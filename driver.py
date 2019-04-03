@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 from flask_bootstrap import Bootstrap
 from image_info import image_info
+from PIL import Image
 import random
 import ast
 
@@ -25,7 +26,9 @@ def main_page():
 @app.route('/image_info/<var>')
 def image_page(var):
     new_var = ast.literal_eval(var)
-    return render_template('image_info.html', pic=new_var)
+    current_image = Image.open("static/" + new_var["id"] + ".jpg")
+    dimensions_w, dimensions_h = current_image.size
+    return render_template('image_info.html', pic=new_var, w=dimensions_w, h=dimensions_h)
 
 if __name__ == '__main__':
     app.run(debug=True)
