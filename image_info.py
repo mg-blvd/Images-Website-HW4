@@ -1,3 +1,9 @@
+'''Authors: Misael Guijarro && Jose Alfaro
+Date: 04/02/2019
+Class: CST 205
+Teacher: Wes Modes
+Description: Holds all the info for ther images we are using.'''
+
 image_info = [
     {
         "id" : "34694102243_3370955cf9_z",
