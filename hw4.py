@@ -38,7 +38,7 @@ def main_page():
         current_images.append(assert_no_repeating(past_images, current_image_titles))
         current_image_titles.append(current_images[i]["title"])
     edit_text(current_image_titles)
-    return render_template('home.html', first=current_images[0], second=current_images[1], third=current_images[2])
+    return render_template('home.html', image_list=current_images)
 
 #this will route the function to be the pages where the individual image description is on after clicking on it
 #this function will display the image resized onto another page with some description of it
