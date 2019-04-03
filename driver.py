@@ -17,9 +17,9 @@ def assert_no_repeating(array1):
 @app.route('/')
 def main_page():
     past_images = []
-    current_images = [0,0,0]
+    current_images = []
     for i in range(len(current_images)):
-        current_images[i] = assert_no_repeating(past_images)
+        current_images.append(assert_no_repeating(past_images))
         past_images.append(current_images[i]["title"])
     return render_template('home.html', first=current_images[0], second=current_images[1], third=current_images[2])
 
