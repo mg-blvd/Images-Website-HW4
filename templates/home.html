@@ -1,13 +1,18 @@
-<h1>Pictures</h1>
-<h3>{{ first["title"] }}</h3>
-<a href="{{ url_for('image_page', var=first) }}">
-  <img src={{ url_for('static', filename = (first["id"] + ".jpg")) }} width="200" class="img-responsive img-rounded" alt={{ first["title"] }}>
-</a>
-<h3>{{ second["title"] }}</h3>
-<a href="{{ url_for('image_page', var=second) }}">
-  <img src={{ url_for('static', filename = (second["id"] + ".jpg")) }} width="200" class="img-responsive img-rounded" alt={{ second["title"] }}>
-</a>
-<h3>{{ third["title"] }}</h3>
-<a href="{{ url_for('image_page', var=third) }}">
-  <img src={{ url_for('static', filename = (third["id"] + ".jpg")) }} width="200" class="img-responsive img-rounded" alt={{ third["title"] }}>
-</a>
+<!DOCTYPE html>
+<html>
+  <head>
+    <h1>Pictures</h1>
+    <h3>{{ first["title"] }}</h3>
+    <a href="{{ url_for('image_page', var=first) }}">
+      <img src={{ url_for('static', filename = (first["id"] + ".jpg")) }} width="200" class="img-responsive img-rounded" alt={{ first["title"] }}>
+    </a>
+    <h3>{{ second["title"] }}</h3>
+    <a href="{{ url_for('image_page', var=second) }}">
+      <img src={{ url_for('static', filename = (second["id"] + ".jpg")) }} width="200" class="img-responsive img-rounded" alt={{ second["title"] }}>
+    </a>
+    <h3>{{ third["title"] }}</h3>
+    <a href="{{ url_for('image_page', var=third) }}">
+      <img src={{ url_for('static', filename = (third["id"] + ".jpg")) }} width="200" class="img-responsive img-rounded" alt={{ third["title"] }}>
+    </a>
+  </body>
+</html>

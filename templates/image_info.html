@@ -1,2 +1,13 @@
-<img src={{ url_for('static', filename = (pic["id"] + ".jpg")) }} class="img-responsive img-rounded" alt={{ pic["title"] }}>
-<a href="{{url_for('main_page')}}">Go back to Homepage</a>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Specfic Image</title>
+  </head>
+  <body>
+    <h3>"{{ pic["title"] }}" by {{ pic["flickr_user"] }}</h3>
+    <img src={{ url_for('static', filename = (pic["id"] + ".jpg")) }} class="img-responsive img-rounded" alt={{ pic["title"] }}>
+    <br><br>
+    <p>RGB image in JPEG format</p>
+    <a href="{{url_for('main_page')}}">Go back to Homepage</a>
+  </body>
+</html>

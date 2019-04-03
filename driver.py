@@ -24,7 +24,6 @@ def main_page():
 
 @app.route('/image_info/<var>')
 def image_page(var):
-    print(type(var))
     new_var = ast.literal_eval(var)
     return render_template('image_info.html', pic=new_var)
 
