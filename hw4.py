@@ -55,4 +55,5 @@ def image_page(var):
     return render_template('image_info.html', pic=new_var, w=dimensions_w, h=dimensions_h)
 
 if __name__ == '__main__':
+    print("Working!")
     app.run(debug=True)
